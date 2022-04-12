@@ -9,3 +9,6 @@ Running instructions:
 - Open the directory where my files are located
 - Depending on your operating system, input the command to run my main.py file
 - Enjoy!
+
+Youtube video:
+https://www.youtube.com/watch?v=5QFRgcMa-Rk
