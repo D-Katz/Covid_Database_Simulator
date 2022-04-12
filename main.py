@@ -73,6 +73,7 @@ def insert_data():
     #inserts into hub
     cursor.execute("""INSERT INTO hub VALUES('1A','Toronto','Good');""")
     cursor.execute("""INSERT INTO hub VALUES('1B','Vaughan','Good');""")
+    connection.commit()
 
 
 def view_user(query):
@@ -139,6 +140,33 @@ def view_store(query):
         print("#######################################\n")
         quit()
 
+def view_hub(query):
+    #prints everything in the table
+    if query == "admin_all":
+            cursor.execute("""SELECT * FROM hub;""")    
+            result = cursor.fetchall()
+            print("\n##########################")
+            print("ID | Location | Report")
+            for x in result:
+                print(x)
+            print("##########################")
+            quit()
+
+def heal_user(query):
+    cursor.execute("update user set covid_status = 'negative' where user.user_id =:id", {"id": query})
+    
+def sick_user(query):
+    cursor.execute("update user set covid_status = 'positive' where user.user_id =:id", {"id": query})
+    
+def print_user(query):
+    cursor.execute("SELECT name, sin, covid_status FROM user where user.user_id  =:id", {"id": query})
+    result = cursor.fetchall()
+    print("\n#######################################")
+    for x in result:
+            print(f"Name: {x[0]} SIN: {x[1]} Covid Status: {x[2]}")
+    print("#######################################\n")
+    quit()
+
 
 def main():
     initial_input = int(input("Which operation do you want:\n1: View Data\n2: Update Data\n3: View N:N\n#0: quit.\n").lower())
@@ -167,11 +195,21 @@ def main():
             view_store(use_case)
 
         #wants to view hubs
-        #elif view == 3:
+        elif view == 3:
+            use_case = "admin_all"
+            view_hub(use_case)
 
     elif initial_input == 2:
-        update = int(input("Udpating Data: Would you like to Update\n#1 Users\n#2 Stores\n#3 Hubs"))
-
+        update = int(input("Udpating Data: Would you like to make a user positive or negative:\n#1 Positive\n#2 Negative\n"))
+        if update == 1:
+            use_case = input("Enter the ID of the user you want to give Covid:").upper()
+            sick_user(use_case)
+            print_user(use_case)
+            
+        elif update==2:
+            use_case = input("Enter the ID of the user you want to heal from Covid:").upper()
+            heal_user(use_case)
+            print_user(use_case)
 
 
     elif initial_input == 3:
