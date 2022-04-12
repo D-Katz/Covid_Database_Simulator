@@ -82,7 +82,7 @@ def insert_data():
         """INSERT OR IGNORE INTO store VALUES('1A','Grocery','Toronto','Walmart','negative',0001,'Open');"""
     )
     cursor.execute(
-        """INSERT OR IGNORE INTO store VALUES('1B','Grocery','Vaughan','Walmart','negative',0002,'Close');"""
+        """INSERT OR IGNORE INTO store VALUES('1B','Grocery','Vaughan','Walmart','negative',0002,'Open');"""
     )
     cursor.execute(
         """INSERT OR IGNORE INTO store VALUES('1C','Grocery','Toronto','SuperStore','negative',0003,'Open');"""
@@ -94,7 +94,7 @@ def insert_data():
         """INSERT OR IGNORE INTO store VALUES('1E','Grocery','Toronto','NoFrills','negative',0005,'Open');"""
     )
     cursor.execute(
-        """INSERT OR IGNORE INTO store VALUES('1F','Grocery','Vaughan','NoFills','negative',0006,'Close');"""
+        """INSERT OR IGNORE INTO store VALUES('1F','Grocery','Vaughan','NoFills','negative',0006,'Open');"""
     )
     cursor.execute(
         """INSERT OR IGNORE INTO store VALUES('1G','Tech','Toronto','BestBuy','negative',0005,'Open');"""
@@ -106,7 +106,7 @@ def insert_data():
         """INSERT OR IGNORE INTO store VALUES('1I','Warehouse','Toronto','Costco','negative',0005,'Open');"""
     )
     cursor.execute(
-        """INSERT OR IGNORE INTO store VALUES('1J','Warehouse','Vaughan','Costco','negative',0007,'Close');"""
+        """INSERT OR IGNORE INTO store VALUES('1J','Warehouse','Vaughan','Costco','negative',0007,'Open');"""
     )
 
     #inserts into hub
@@ -239,13 +239,13 @@ def get_time_stamp(query):
 
 def sick_store(timestamp):
     cursor.execute(
-        "update store set covid_status = 'positive' where store.time_stamp =:timestamp",
+        "update store set covid_status = 'positive', report = 'closed' where store.time_stamp =:timestamp",
         {"timestamp": timestamp})
 
 
 def heal_store(timestamp):
     cursor.execute(
-        "update store set covid_status = 'negative' where store.time_stamp =:timestamp",
+        "update store set covid_status = 'negative', report = 'open' where store.time_stamp =:timestamp",
         {"timestamp": timestamp})
 
 
