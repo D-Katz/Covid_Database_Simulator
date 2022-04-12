@@ -251,23 +251,27 @@ def heal_store(timestamp):
 
 def print_sick_stores(timestamp):
     cursor.execute(
-        "SELECT name, location, covid_status FROM store where covid_status = 'positive' and store.time_stamp =:timestamp",
+        "SELECT name, location, covid_status, report FROM store where covid_status = 'positive' and store.time_stamp =:timestamp",
         {"timestamp": timestamp})
     result = cursor.fetchall()
     print("\n#######################################")
     for x in result:
-        print(f"Store: {x[0]} Location: {x[1]} Covid Status: {x[2]}")
+        print(
+            f"Store: {x[0]} Location: {x[1]} Covid Status: {x[2]} Report: {x[3]}"
+        )
     print("#######################################\n")
 
 
 def print_heal_stores(timestamp):
     cursor.execute(
-        "SELECT name, location, covid_status FROM store where covid_status = 'negative' and store.time_stamp =:timestamp",
+        "SELECT name, location, covid_status, report FROM store where covid_status = 'negative' and store.time_stamp =:timestamp",
         {"timestamp": timestamp})
     result = cursor.fetchall()
     print("\n#######################################")
     for x in result:
-        print(f"Store: {x[0]} Location: {x[1]} Covid Status: {x[2]}")
+        print(
+            f"Store: {x[0]} Location: {x[1]} Covid Status: {x[2]} Report: {x[3]}"
+        )
     print("#######################################\n")
 
 
