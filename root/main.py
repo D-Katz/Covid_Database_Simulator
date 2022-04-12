@@ -41,7 +41,7 @@ def create_tables():
 def insert_data():
     #inserts into user
     cursor.execute(
-        """INSERT OR IGNORE INTO user VALUES('1A','John','tNw8bibJ','Vaughan',051973,'negative',0100);"""
+        """INSERT OR IGNORE INTO user VALUES('1A','John','tNw8bibJ','Vaughan',151973,'negative',0100);"""
     )
     cursor.execute(
         """INSERT OR IGNORE INTO user VALUES('1B','Dave','uCab91j1','Toronto',542950,'negative',0200);"""
