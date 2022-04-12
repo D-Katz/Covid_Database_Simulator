@@ -41,72 +41,72 @@ def create_tables():
 def insert_data():
     #inserts into user
     cursor.execute(
-        """INSERT OR IGNORE INTO user VALUES('1A','John','tNw8bibJ','Vaughan',123456,'negative',0001);"""
+        """INSERT OR IGNORE INTO user VALUES('1A','John','tNw8bibJ','Vaughan',051973,'negative',0100);"""
     )
     cursor.execute(
-        """INSERT OR IGNORE INTO user VALUES('1B','Dave','uCab91j1','Toronto',456789,'negative',0002);"""
+        """INSERT OR IGNORE INTO user VALUES('1B','Dave','uCab91j1','Toronto',542950,'negative',0200);"""
     )
     cursor.execute(
-        """INSERT OR IGNORE INTO user VALUES('1C','Mark','m2wr3W9K','Vaughan',789123,'negative',0003);"""
+        """INSERT OR IGNORE INTO user VALUES('1C','Mark','m2wr3W9K','Vaughan',554636,'negative',0300);"""
     )
     cursor.execute(
-        """INSERT OR IGNORE INTO user VALUES('1D','Luke','UKAiItrC','Vaughan',789123,'negative',0003);"""
+        """INSERT OR IGNORE INTO user VALUES('1D','Luke','UKAiItrC','Vaughan',647045,'negative',0300);"""
     )
     cursor.execute(
-        """INSERT OR IGNORE INTO user VALUES('1E','Levi','uh0RlWVg','Toronto',789123,'negative',0004);"""
+        """INSERT OR IGNORE INTO user VALUES('1E','Levi','uh0RlWVg','Toronto',370241,'negative',0400);"""
     )
     cursor.execute(
-        """INSERT OR IGNORE INTO user VALUES('1F','Jack','roGH379o','Vaughan',789123,'negative',0004);"""
+        """INSERT OR IGNORE INTO user VALUES('1F','Jack','roGH379o','Vaughan',924127,'negative',0400);"""
     )
     cursor.execute(
-        """INSERT OR IGNORE INTO user VALUES('1G','Evan','M1kQdKsL','Vaughan',789123,'negative',0003);"""
+        """INSERT OR IGNORE INTO user VALUES('1G','Evan','M1kQdKsL','Vaughan',553766,'negative',0500);"""
     )
     cursor.execute(
-        """INSERT OR IGNORE INTO user VALUES('1H','Axel','HdzCfxEl','VaUghan',789123,'negative',0005);"""
+        """INSERT OR IGNORE INTO user VALUES('1H','Axel','HdzCfxEl','VaUghan',662363,'negative',0500);"""
     )
     cursor.execute(
-        """INSERT OR IGNORE INTO user VALUES('1I','Jose','Xz5Sl2kB','Toronto',789123,'negative',0005);"""
+        """INSERT OR IGNORE INTO user VALUES('1I','Jose','Xz5Sl2kB','Toronto',617716,'negative',0400);"""
     )
     cursor.execute(
-        """INSERT OR IGNORE INTO user VALUES('1J','Liam','5jWlNoOj','Toronto',789123,'negative',0006);"""
+        """INSERT OR IGNORE INTO user VALUES('1J','Liam','5jWlNoOj','Toronto',194740,'negative',0700);"""
     )
     cursor.execute(
-        """INSERT OR IGNORE INTO user VALUES('1K','Noah','bXbbFrK7','Toronto',789123,'negative',0007);"""
+        """INSERT OR IGNORE INTO user VALUES('1K','Noah','bXbbFrK7','Toronto',042666,'negative',0800);"""
     )
     cursor.execute(
-        """INSERT OR IGNORE INTO user VALUES('1L','Owen','W09qGYTi','Toronto',789123,'negative',0007);"""
+        """INSERT OR IGNORE INTO user VALUES('1L','Owen','W09qGYTi','Toronto',446149,'negative',0800);"""
     )
 
     #inserts into store
     cursor.execute(
-        """INSERT OR IGNORE INTO store VALUES('1A','Grocery','Toronto','Walmart','negative',0001,'Open');"""
+        """INSERT OR IGNORE INTO store VALUES('1A','Grocery','Toronto','Walmart','negative',0100,'Open');"""
     )
     cursor.execute(
-        """INSERT OR IGNORE INTO store VALUES('1B','Grocery','Vaughan','Walmart','negative',0002,'Open');"""
+        """INSERT OR IGNORE INTO store VALUES('1B','Grocery','Vaughan','Walmart','negative',0200,'Open');"""
     )
     cursor.execute(
-        """INSERT OR IGNORE INTO store VALUES('1C','Grocery','Toronto','SuperStore','negative',0003,'Open');"""
+        """INSERT OR IGNORE INTO store VALUES('1C','Grocery','Toronto','SuperStore','negative',0500,'Open');"""
     )
     cursor.execute(
-        """INSERT OR IGNORE INTO store VALUES('1D','Grocery','Vaughan','SuperStore','negative',0004,'Open');"""
+        """INSERT OR IGNORE INTO store VALUES('1D','Grocery','Vaughan','SuperStore','negative',0400,'Open');"""
     )
     cursor.execute(
-        """INSERT OR IGNORE INTO store VALUES('1E','Grocery','Toronto','NoFrills','negative',0005,'Open');"""
+        """INSERT OR IGNORE INTO store VALUES('1E','Grocery','Toronto','NoFrills','negative',0500,'Open');"""
     )
     cursor.execute(
         """INSERT OR IGNORE INTO store VALUES('1F','Grocery','Vaughan','NoFills','negative',0006,'Open');"""
     )
     cursor.execute(
-        """INSERT OR IGNORE INTO store VALUES('1G','Tech','Toronto','BestBuy','negative',0005,'Open');"""
+        """INSERT OR IGNORE INTO store VALUES('1G','Tech','Toronto','BestBuy','negative',0500,'Open');"""
     )
     cursor.execute(
-        """INSERT OR IGNORE INTO store VALUES('1H','Tech','Vaughan','BestBuy','negative',0006,'Open');"""
+        """INSERT OR IGNORE INTO store VALUES('1H','Tech','Vaughan','BestBuy','negative',0300,'Open');"""
     )
     cursor.execute(
-        """INSERT OR IGNORE INTO store VALUES('1I','Warehouse','Toronto','Costco','negative',0005,'Open');"""
+        """INSERT OR IGNORE INTO store VALUES('1I','Warehouse','Toronto','Costco','negative',0500,'Open');"""
     )
     cursor.execute(
-        """INSERT OR IGNORE INTO store VALUES('1J','Warehouse','Vaughan','Costco','negative',0007,'Open');"""
+        """INSERT OR IGNORE INTO store VALUES('1J','Warehouse','Vaughan','Costco','negative',0300,'Open');"""
     )
 
     #inserts into hub
