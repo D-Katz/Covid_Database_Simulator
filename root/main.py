@@ -285,13 +285,13 @@ def main():
         if initial_input == 1:
             view = int(
                 input(
-                    "\nViewing Data: Would you like to view\n#1 Users\n#2 Stores\n#3 Hubs\n"
+                    "\nViewing Data: Would you like to view\n#1 Shoppers\n#2 Stores\n#3 Hubs\n"
                 ))
             #wants to view users
             if view == 1:
                 users_view = int(
                     input(
-                        "\nWould you like to view:\n#1 All Users (Admin)\n#2 Negative Users\n#3 Positive Users\n"
+                        "\nWould you like to view:\n#1 All Users (Admin)\n#2 Negative Shoppers \n#3 Covid Positive Shoppers\n"
                     ))
                 if users_view == 1:
                     use_case = "admin_all"
@@ -305,7 +305,7 @@ def main():
             elif view == 2:
                 stores_view = int(
                     input(
-                        "\nWould you like to view:\n#1 All Stores (Admin)\n#2 Stores with no Covid Cases\n#3 Stores with no Covid Cases\n"
+                        "\nWould you like to view:\n#1 All Stores (Admin)\n#2 Stores with no Covid Cases\n#3 Stores with Covid Cases\n"
                     ))
                 if stores_view == 1:
                     use_case = "admin_all"
@@ -323,7 +323,7 @@ def main():
         elif initial_input == 2:
             update = int(
                 input(
-                    "\nUpdating Data: Would you like to make a user Covidpositive or negative:\n#1 Positive\n#2 Negative\n"
+                    "\nUpdating Data: Would you like to make a Shopper Covid positive or negative:\n#1 Positive\n#2 Negative\n"
                 ))
             if update == 1:
                 use_case = input(
@@ -346,7 +346,7 @@ def main():
         elif initial_input == 3:
             update = int(
                 input(
-                    "\nN:N relationship view: Would you like to view\n#1 Closed stores and the customer that caused them to close \n#2 Hub Cities with closed stores."
+                    "\nN:N relationship view: Would you like to view\n#1 Closed stores and the shopper that caused them to close \n#2 open stores up to being functional."
                 ))
 
             if update == 1:
